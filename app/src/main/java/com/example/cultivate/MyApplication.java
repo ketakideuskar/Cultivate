@@ -2,6 +2,8 @@ package com.example.cultivate;
 
 import android.app.Application;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.TreeMap;
 
 /*
@@ -12,7 +14,7 @@ public class MyApplication extends Application {
 
     public MyApplication() {
         super();
-        holdData = new Map<String, String>();
+        holdData = new HashMap<String, String>();
     }
 
 }
