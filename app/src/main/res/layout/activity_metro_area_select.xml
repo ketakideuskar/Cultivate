@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MetroAreaSelect">
 
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="102dp"
@@ -13,4 +20,18 @@
         android:text="Button"
         tools:layout_editor_absoluteX="154dp"
         tools:layout_editor_absoluteY="497dp" />
+
+    <resources android:id="@+id/resources">
+
+        <string-array name="location_array">
+
+            <item>Seattle</item>
+
+            <item>Chicago</item>
+
+            <item>New York</item>
+        </string-array>
+    </resources>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
