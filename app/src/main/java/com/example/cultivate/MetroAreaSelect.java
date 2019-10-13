@@ -40,4 +40,9 @@ public class MetroAreaSelect extends AppCompatActivity {
         intent.putExtra("Language", language);
         startActivity(intent);
     }
+
+    public void logOut(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }
