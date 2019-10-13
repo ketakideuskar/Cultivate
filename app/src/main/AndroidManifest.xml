@@ -32,7 +32,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".Map"
+            android:name=".langMap"
             android:label="@string/title_activity_map" />
         <activity android:name=".MetroAreaSelect" />
         <activity android:name=".MainActivity">

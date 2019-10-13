@@ -27,7 +27,7 @@ public class MetroAreaSelect extends AppCompatActivity {
 
     public void sendMessage(View view) {
         city = mySpinner.getSelectedItem().toString();
-        Intent intent = new Intent(this, Map.class);
+        Intent intent = new Intent(this, langMap.class);
         intent.putExtra("Username", userName);
         intent.putExtra("City", city);
         startActivity(intent);
