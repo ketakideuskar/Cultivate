@@ -8,11 +8,11 @@ import java.util.TreeMap;
 
  */
 public class MyApplication extends Application {
-    public Map<String, Person> holdData;
+    public Map<String, String> holdData;
 
     public MyApplication() {
         super();
-        holdData = new Map<String, Person>();
+        holdData = new Map<String, String>();
     }
 
 }

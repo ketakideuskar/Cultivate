@@ -20,16 +20,13 @@ public class MainActivity extends AppCompatActivity {
     private EditText password;
     private TextView info;
     private Button button;
-    private HashMap<String, String> passwordMap = new HashMap<String, String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Initialize the SDK
         Places.initialize(getApplicationContext(), "AIzaSyDp7RDmSHrZ-tx3ezwafjlAAPzN-VQqBhs");
-
 // Create a new Places client instance
-        PlacesClient placesClient = Places.createClient(this);
     }
 
     public void validate(String userName, String userPassword) {
