@@ -3,8 +3,9 @@
     <string name="title_activity_map">Map</string>
 
     <string-array name="names">
-        <item>Seattle</item>
+        <item>Please select your metro area</item>
         <item>New York</item>
+        <item>Seattle</item>
         <item>Los Angeles</item>
         <item>Chicago</item>
     </string-array>
