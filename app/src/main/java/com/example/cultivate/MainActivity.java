@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         EditText name = findViewById(R.id.editText);
         String userName = name.getText().toString();
         EditText name2 = findViewById(R.id.editText2);
-        String password = name.getText().toString();
+        String password = name2.getText().toString();
         if (passwordMap.containsKey(userName) && passwordMap.get(userName).equals(password)) {
             Intent intent = new Intent(this, MetroAreaSelect.class);
             intent.putExtra("Username", userName);
