@@ -9,4 +9,12 @@
         <item>Los Angeles</item>
         <item>Chicago</item>
     </string-array>
+
+    <string-array name="names2">
+        <item>Please select your language</item>
+        <item>Spanish</item>
+        <item>Arabic</item>
+        <item>Tagalog</item>
+        <item>Russian</item>
+    </string-array>
 </resources>

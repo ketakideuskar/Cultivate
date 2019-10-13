@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.libraries.places.api.net.PlacesClient;
 import com.google.android.libraries.places.api.Places;
-import java.util.Map;
+import java.util.HashMap;
 
 //DUBHACKS 2019
 public class MainActivity extends AppCompatActivity {
@@ -30,8 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Places.initialize(getApplicationContext(), "AIzaSyDp7RDmSHrZ-tx3ezwafjlAAPzN-VQqBhs");
         MyApplication a = (MyApplication) getApplication();
         passwordMap = a.holdData;
-        passwordMap.put("kdeuskar", "ilovedogs");
-        passwordMap.put("paul", "ilovegeo");
+
     }
 
     public void validate(View view) {
@@ -43,8 +42,6 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, MetroAreaSelect.class);
             intent.putExtra("Username", userName);
             startActivity(intent);
-        } else {
-            Toast.makeText(this, "Invalid Login", Toast.LENGTH_SHORT).show();
         }
     }
 

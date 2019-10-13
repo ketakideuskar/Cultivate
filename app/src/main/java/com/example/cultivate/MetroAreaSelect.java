@@ -12,6 +12,8 @@ public class MetroAreaSelect extends AppCompatActivity {
     private String userName;
     private String city;
     private Spinner mySpinner;
+    private Spinner mySpinner2;
+    private String language;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,19 +24,20 @@ public class MetroAreaSelect extends AppCompatActivity {
         mySpinner = (Spinner) findViewById(R.id.location_spinner);
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MetroAreaSelect.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner2 = (Spinner) findViewById(R.id.location_spinner2);
+        ArrayAdapter<String> myAdapter2 = new ArrayAdapter<String>(MetroAreaSelect.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names2));
+        myAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner.setAdapter(myAdapter);
+        mySpinner2.setAdapter(myAdapter2);
     }
 
     public void sendMessage(View view) {
         city = mySpinner.getSelectedItem().toString();
+        language = mySpinner2.getSelectedItem().toString();
         Intent intent = new Intent(this, langMap.class);
         intent.putExtra("Username", userName);
         intent.putExtra("City", city);
-        startActivity(intent);
-    }
-
-    public void logOut(View view) {
-        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("Language", language);
         startActivity(intent);
     }
 }
