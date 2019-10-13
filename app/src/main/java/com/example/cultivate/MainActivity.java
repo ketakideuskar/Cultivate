@@ -44,8 +44,9 @@ public class MainActivity extends AppCompatActivity {
 
     /** Called when the user taps the Send button */
     public void sendMessage(View view) {
+        EditText username = (EditText) findViewById(R.id.editText);
         Intent intent = new Intent(this, MetroAreaSelect.class);
-        intent.putExtra("Username", "Paul");
+        intent.putExtra("Username", username.getText().toString());
         startActivity(intent);
     }
 
