@@ -23,7 +23,6 @@ public class MetroAreaSelect extends AppCompatActivity {
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(MetroAreaSelect.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.names));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner.setAdapter(myAdapter);
-
     }
 
     public void sendMessage(View view) {

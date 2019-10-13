@@ -11,7 +11,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class Map extends FragmentActivity implements OnMapReadyCallback {
+public class Map<S, P> extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private String city;
@@ -44,6 +44,9 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
         LatLng coords = new LatLng(0,0);
         if (city.equals("Seattle")) {
             coords = new LatLng(47.6062, -122.3321);
+            mMap.addMarker(new MarkerOptions().position(new LatLng(47.610377, -122.2006786 )).title("Teacher in Bellevue"));
+            mMap.addMarker(new MarkerOptions().position(new LatLng(47.6062095, -122.3320708)).title("Teacher in Seattle"));
+            mMap.addMarker(new MarkerOptions().position(new LatLng(47.7623204, -122.2054035)).title("Teacher in Bothell"));
         } else if (city.equals("New York")){
             coords = new LatLng(40.730610, -73.935242);
         } else if (city.equals("Los Angeles")) {

@@ -29,6 +29,7 @@ public class SignUp extends AppCompatActivity {
 
     public void goToMap(View view) {
         Intent i = new Intent(this, MetroAreaSelect.class);
+        i.putExtra("Username", "Paul");
         startActivity(i);
     }
 }
