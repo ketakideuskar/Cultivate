@@ -32,4 +32,9 @@ public class MetroAreaSelect extends AppCompatActivity {
         intent.putExtra("City", city);
         startActivity(intent);
     }
+
+    public void logOut(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }
