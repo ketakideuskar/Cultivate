@@ -19,6 +19,7 @@ public class MetroAreaSelect extends AppCompatActivity {
     public void sendMessage(View view) {
         Intent intent = new Intent(this, Map.class);
         intent.putExtra("Username", userName);
+        intent.putExtra("City", "Seattle");
         startActivity(intent);
     }
 }
