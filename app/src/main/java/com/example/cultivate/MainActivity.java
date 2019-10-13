@@ -34,8 +34,12 @@ public class MainActivity extends AppCompatActivity {
         passwordMap.put("paul", "ilovegeo");
     }
 
-    public void validate(String userName, String userPassword) {
-        if (passwordMap.containsKey(userName) && passwordMap.get(userName).equals(userPassword)) {
+    public void validate(View view) {
+        EditText name = findViewById(R.id.editText);
+        String userName = name.getText().toString();
+        EditText name = findViewById(R.id.editText2);
+        String password = name.getText().toString();
+        if (passwordMap.containsKey(userName) && passwordMap.get(userName).equals(password)) {
             Intent intent = new Intent(this, MetroAreaSelect.class);
             intent.putExtra("Username", userName);
             startActivity(intent);
@@ -46,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     /** Called when the user taps the Send button */
     public void sendMessage(View view) {
-        EditText username = (EditText) findViewById(R.id.editText);
+        EditText username = findViewById(R.id.editText);
         Intent intent = new Intent(this, MetroAreaSelect.class);
         intent.putExtra("Username", username.getText().toString());
         startActivity(intent);
