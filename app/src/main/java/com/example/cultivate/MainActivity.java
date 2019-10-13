@@ -26,9 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Initialize the SDK
-        Places.initialize(getApplicationContext(), "AIzaSyDp7RDmSHrZ-tx3ezwafjlAAPzN-VQqBhs");
-        MyApplication a = (MyApplication) getApplication();
+        MyApplication a = (MyApplication)getApplication();
         passwordMap = a.holdData;
 
     }
@@ -38,10 +36,14 @@ public class MainActivity extends AppCompatActivity {
         String userName = name.getText().toString();
         EditText name2 = findViewById(R.id.editText2);
         String password = name2.getText().toString();
-        if (passwordMap.containsKey(userName) && passwordMap.get(userName).equals(password)) {
-            Intent intent = new Intent(this, MetroAreaSelect.class);
-            intent.putExtra("Username", userName);
-            startActivity(intent);
+        if (passwordMap.containsKey(userName) && passwordMap.get(userName) != null) {
+            if (passwordMap.get(userName).equals(password)) {
+                Intent intent = new Intent(this, MetroAreaSelect.class);
+                intent.putExtra("Username", userName);
+                startActivity(intent);
+            } else {
+                Toast.makeText(this, "Username Taken", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
