@@ -1,7 +1,7 @@
 package com.example.cultivate;
 
 import androidx.fragment.app.FragmentActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -14,10 +14,13 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class Map extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-
+    private String city;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent intent = getIntent();
+        city = intent.getStringExtra("City");
+
         setContentView(R.layout.activity_map);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -38,10 +41,19 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng coords = new LatLng(0,0);
+        if (city.equals("Seattle")) {
+            coords = new LatLng(47.6062, -122.3321);
+        } else if (city.equals("New York")){
+            coords = new LatLng(40.730610, -73.935242);
+        } else if (city.equals("Los Angeles")) {
+            coords = new LatLng(34.0522, -118.2437);
+        } else { // Chicago
+            coords = new LatLng(41.8781, -87.6298);
+        }
+        //mMap.addMarker(new MarkerOptions().position(coords).title("Marker in Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(coords));
+        mMap.setMaxZoomPreference(22);
+        mMap.setMinZoomPreference(9);
     }
 }
