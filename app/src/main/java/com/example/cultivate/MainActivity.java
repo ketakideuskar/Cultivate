@@ -47,5 +47,13 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("Username", username.getText().toString());
         startActivity(intent);
     }
+
+    public void goToSignUp {
+        Intent i = new Intent(this, SignUp.class);
+        startActivity(i);
+    }
+
+
+
 }
 
