@@ -2,7 +2,7 @@ package com.example.cultivate;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 
@@ -25,5 +25,9 @@ public class SignUp extends AppCompatActivity {
         password = (EditText) findViewById(R.id.newPassword);
         String mapUsername = username.getText().toString();
         String mapPassword = password.getText().toString();
+    }
+
+    public void goToMap(View view) {
+        Intent i = new Intent(this, MetroAreaSelect.class);
     }
 }
