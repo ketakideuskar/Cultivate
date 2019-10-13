@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.libraries.places.api.net.PlacesClient;
 import com.google.android.libraries.places.api.Places;
-import android.widget.pla
+
 
 //DUBHACKS 2019
 public class MainActivity extends AppCompatActivity {
@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Initialize the SDK
-        Places.initialize(getApplicationContext(), "AIzaSyDp7RDmSHrZ-tx3ezwafjlAAPzN-VQqBhs");
+        //Places.initialize(getApplicationContext(), "AIzaSyDp7RDmSHrZ-tx3ezwafjlAAPzN-VQqBhs");
 
 // Create a new Places client instance
-        PlacesClient placesClient = Places.createClient(this);
+        //PlacesClient placesClient = Places.createClient(this);
     }
 
     public void validate(String userName, String userPassword) {
@@ -45,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
     /** Called when the user taps the Send button */
     public void sendMessage(View view) {
-        EditText username = (EditText) findViewById(R.id.editText);
+        //EditText username = (EditText) findViewById(R.id.editText);
         Intent intent = new Intent(this, MetroAreaSelect.class);
-        intent.putExtra("Username", username.getText().toString());
+        intent.putExtra("Username", "Paul");
         startActivity(intent);
     }
 
