@@ -3,10 +3,7 @@ package com.example.cultivate;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.*;
-
 
 public class MetroAreaSelect extends AppCompatActivity {
 
@@ -36,6 +33,9 @@ public class MetroAreaSelect extends AppCompatActivity {
         intent.putExtra("City", "Seattle");
         startActivity(intent);
     }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b25967078173fc58647ea6691134ee8d62bf6ada
 }
