@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     public void validate(View view) {
         EditText name = findViewById(R.id.editText);
         String userName = name.getText().toString();
-        EditText name = findViewById(R.id.editText2);
+        EditText name2 = findViewById(R.id.editText2);
         String password = name.getText().toString();
         if (passwordMap.containsKey(userName) && passwordMap.get(userName).equals(password)) {
             Intent intent = new Intent(this, MetroAreaSelect.class);
