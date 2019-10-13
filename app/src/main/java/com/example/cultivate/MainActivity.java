@@ -40,8 +40,6 @@ public class MainActivity extends AppCompatActivity {
         //}
     }
 
-
-
     /** Called when the user taps the Send button */
     public void sendMessage(View view) {
         EditText username = (EditText) findViewById(R.id.editText);
@@ -49,6 +47,5 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("Username", username.getText().toString());
         startActivity(intent);
     }
-
 }
 

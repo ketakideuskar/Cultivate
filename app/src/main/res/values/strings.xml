@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Cultivate</string>
     <string name="title_activity_map">Map</string>
+
+    <string-array name="names">
+        <item>Seattle</item>
+        <item>New York</item>
+        <item>Los Angeles</item>
+        <item>Chicago</item>
+    </string-array>
 </resources>
