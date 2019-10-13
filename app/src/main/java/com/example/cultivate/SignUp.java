@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class SignUp extends AppCompatActivity {
@@ -25,8 +24,8 @@ public class SignUp extends AppCompatActivity {
     }
 
     public void addToMap(View view) {
-        username = (EditText) findViewById(R.id.editText3);
-        password = (EditText) findViewById(R.id.newPassword);
+        username = findViewById(R.id.editText3);
+        password = findViewById(R.id.newPassword);
         String mapUsername = username.getText().toString();
         String mapPassword = password.getText().toString();
         if (!passwordMap.containsKey(mapUsername)) {

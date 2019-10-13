@@ -28,9 +28,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // Initialize the SDK
         Places.initialize(getApplicationContext(), "AIzaSyDp7RDmSHrZ-tx3ezwafjlAAPzN-VQqBhs");
-        MyApplication a = (MyApplication) getApplication();
+        MyApplication a =  getApplication();
         passwordMap = a.holdData;
-
+        passwordMap.put("ketaki", "ilovedogs");
+        passwordMap.put("paul", "ilovegeo");
     }
 
     public void validate(View view) {
